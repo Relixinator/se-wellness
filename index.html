@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE Wellness — Fasting & Tracker</title>
+  <meta name="theme-color" content="#0b6e4f">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>SE Wellness</h1>
+  <nav>
+    <button data-tab="fasting" class="active">Fasting</button>
+    <button data-tab="tracker">Tracker</button>
+  </nav>
+</header>
+
+<main>
+  <section id="tab-fasting" class="tab active">
+    <h2>Fasting Timer</h2>
+    <select id="f-protocol">
+      <option value="16:8">16/8</option>
+      <option value="18:6">18/6</option>
+      <option value="20:4">20/4</option>
+      <option value="custom">Custom</option>
+    </select>
+    <input id="f-custom-f" type="number" min="1" max="36" placeholder="Fast (u)" class="hidden">
+    <input id="f-custom-e" type="number" min="1" max="36" placeholder="Eat (u)" class="hidden">
+    <button id="f-start">Start vasten</button>
+    <button id="f-stop">Stop / eten</button>
+    <div>Status: <span id="f-status">-</span></div>
+    <div>Fase: <span id="f-phase">-</span></div>
+    <div>Countdown: <span id="f-countdown">--:--:--</span></div>
+    <div>Gestart: <span id="f-started">-</span></div>
+    <div>Doel: <span id="f-target">-</span></div>
+    <ul id="f-log"></ul>
+  </section>
+
+  <section id="tab-tracker" class="tab">
+    <h2>Daily Tracker</h2>
+    <input id="t-weight" type="number" step="0.1" placeholder="Gewicht (kg)">
+    <select id="t-mood">
+      <option>😃 Goed</option>
+      <option>😐 OK</option>
+      <option>😞 Moeilijk</option>
+    </select>
+    <input id="t-note" type="text" placeholder="Notitie">
+    <button id="t-add">Toevoegen</button>
+    <button id="t-export">Export JSON</button>
+    <input type="file" id="t-import" accept="application/json">
+    <ul id="t-log"></ul>
+  </section>
+</main>
+
+<footer>
+  <small>Data blijft lokaal (localStorage). Zet op beginscherm voor PWA.</small>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{margin:0;font:15px/1.4 system-ui;background:#0e0e10;color:#eaeaea}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px;background:#0b6e4f}
+h1{margin:0;font-size:18px}
+nav{display:flex;gap:8px}
+nav button{padding:6px 10px;border:none;background:#1a1a1c;color:#fff;border-radius:6px;cursor:pointer}
+nav button.active{outline:2px solid #7ee5b3}
+.tab{display:none;padding:12px}
+.tab.active{display:block}
+.hidden{display:none}
+input,select,button{margin:4px;padding:8px;border-radius:6px;border:1px solid #2a2a2a;background:#121214;color:#fff}
+ul{list-style:none;padding:0;margin:8px 0;display:flex;flex-direction:column;gap:6px}
+ul li{border:1px solid #2a2a2a;border-radius:6px;padding:6px;background:#121214}
